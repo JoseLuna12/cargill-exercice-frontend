@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
+import Home from './pages/home'
+import CreateFarm from './pages/createFarm'
+import EditFarm from './pages/editFarm'
+import Farm from './pages/viewFarm'
+import Test from './pages/test'
+import CreatePond from './pages/createPond'
+import EditPond from './pages/editPond'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/createFarm" exact component={CreateFarm} />
+        <Route path="/editFarm/:id" exact component={EditFarm} />
+        <Route path="/farm/:id" exact component={Farm} />
+        <Route path="/test/:id" exact component={Test} />
+        <Route path="/createPond/:id" exact component={CreatePond} />
+        <Route path="/editPond/:id" exact component={EditPond} />
+      </Switch>
+    </Router>
   );
 }
 

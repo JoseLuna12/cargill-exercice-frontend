@@ -21,6 +21,7 @@ The main organization of the project is:
 - Edit each Pond
 - Erase a Pond
 - Get the total size of a farm
+- Feed each Pond`s shrimps ( save the time where the shrimps where feeded last time )
 
 ## Backend
 The Backend of this project is on a separeted folder. All the http requests are made to the link: `http://localhost:8000/api`, port `8000`
@@ -29,7 +30,7 @@ The Backend of this project is on a separeted folder. All the http requests are 
 - Download the Express project
 - Run `npm install` to install dependencies
 - Connect to a MongoDb database locally or online
-    - Open the `app.js` file and replace the url inside de `mongoose.connect(<>)` function
+    - Open the `app.js` file and replace the url inside de `mongoose.connect(<url>)` function
     - Database name `"cargill_shrimp"`
     - Collection name `"farms"` is used to store all Farms data
     - Collection name `"ponds"` is used to store all Ponds data

@@ -34,3 +34,13 @@ The Backend of this project is on a separeted folder. All the http requests are 
     - Database name `"cargill_shrimp"`
     - Collection name `"farms"` is used to store all Farms data
     - Collection name `"ponds"` is used to store all Ponds data
+
+## Changes
+- Naming controll added
+- Removed not used input values
+- Added option to create a Pond on the Farm list view
+- Added button or instruction to enter a Farm
+- Pond size input now accept decimal values
+- Added button to create another pond
+- Changed spacing from 4 to 2
+- Now API url can be manage on the `.env` file

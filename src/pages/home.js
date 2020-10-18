@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     let isMounted = true;
     function getFarmData() {
-      fetch('http://localhost:8000/api/getFarms')
+      fetch(process.env.REACT_APP_API_URL + '/getFarms')
         .then(response => response.json())
         .then(data => {
           getFarms(data)
